@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:url(scenery.jpg);
+        }
+        .top {
+            height: 50px;
+            background:url(logo.png) no-repeat;
+        }
+        #div{
+            margin: 0 auto;
+            text-align: center;
+            width: 500px;
+        }
+        #all{
+            border: 1px black;
+            left:0;
+            right:0;
+            margin: 0 auto;
+            display:flex;
+            align-items: center;
+        }
+        #login{
+            height: 500px;
+            width: 500px;
+            border: 1px  black;
+            left:0;
+            right:0;
+            margin: 0 auto;
+            background: none;
+            display:block;
+            align-items: center;
+        }
+        #user{
+            display:block;
+            text-align: center;
+            margin-top: 100px;
+            border:1px  grey;
+            width: 500px;
+            height: 50px;
+        }
+        #pw{
+            display:block;
+            text-align: center;
+            margin-top: 30px;
+            border:1px  grey;
+            width: 500px;
+            height: 50px;
+        }
+        #tip1{
+            text-align: center;
+            height: 10px;
+            font-size: 10px;
+            color: rgb(238, 17, 17);
+        }
+        #tip2{
+            text-align: center;
+            height: 10px;
+            font-size: 10px;
+            color: rgb(238, 17, 17);
+        }
+        #input1{
+            border:1px solid;
+            border-width: 0px;
+            outline: none;
+            
+        }
+        #input2{
+            border:1px solid;
+            border-width: 0px;
+            outline: none;
+        }
+        #button{
+            text-align: center;
+        }
+        #sub{
+            margin-top: 30px;
+            width: 300px;
+            height: 50px;
+            background: -webkit-linear-gradient(top left, #e9aa77, #f1da9b, #afe28d);
+            color: rgb(136, 150, 13);
+            font-size: 15px;
+            outline: none;
+            border: none;
+        }
+        #initial{
+            height: 500px;
+            width: 500px;
+            border: 1px  black;
+            left:0;
+            right:0;
+            margin: 0 auto;
+            background: -webkit-linear-gradient(top left, #34bba2, #6c7dca);
+            display:none;
+            align-items: center;
+        }
+        #title{
+            text-align: center;
+            font-size: 40px;
+            color: rgb(182, 86, 75);
+        }
+        #introduce{
+            width: 300px;
+            font-size: 20px;
+            margin: 0 auto;
+        }
+        #text{
+            font-size: 20px;
+            color: salmon;
+            
+        }
+        #btn{
+            text-align: center;
+        }
+        #ready{
+            margin-top: 120px;
+            width: 250px;
+            height: 50px;
+            background: -webkit-linear-gradient(top left, #e9aa77, #f1da9b, #afe28d);
+            color: rgb(136, 150, 13);
+            font-size: 15px;
+            outline: none;
+            border: none;
+            align-items: center;
+        }
+        #choose{
+            height: 500px;
+            width: 500px;
+            border: 1px  black;
+            left:0;
+            right:0;
+            display: none;
+            align-items: center;
+            background: -webkit-linear-gradient(top left, #f9957f, #f2f5d0);
+            overflow:hidden;
+            margin: 0 auto;
+        }
+        .roll{
+            color:navy;
+            height: 15px;
+            width: 400px;
+        }
+        #btn1{
+            margin-top: 20px;
+            text-align: center;
+        }
+        #pl{
+            margin-top: 30px;
+            width: 100px;
+            height: 100px;
+            background-color: palevioletred;
+            color: slateblue;
+            font-size: 50px;
+            outline: none;
+            border: none;
+        }
+        #re{
+            margin-top: 30px;
+            width: 100px;
+            height: 100px;
+            background-color: palevioletred;
+            color: slateblue;
+            font-size: 50px;
+            outline: none;
+            border: none;
+        }
+        #mu{
+            margin-top: 30px;
+            width: 100px;
+            height: 100px;
+            background-color: palevioletred;
+            color: slateblue;
+            font-size: 50px;
+            outline: none;
+            border: none;
+        }
+        #di{
+            margin-top: 30px;
+            width: 100px;
+            height: 100px;
+            background-color: palevioletred;
+            color: slateblue;
+            font-size: 50px;
+            outline: none;
+            border: none;
+        }
+        #tips{
+            text-align: center;
+        }
+        #test{
+            height: 500px;
+            width: 500px;
+            border: 1px  black;
+            left:0;
+            right:0;
+            display: none;
+            align-items: center;
+            margin: 0 auto;
+            background: -webkit-linear-gradient(top left, #4e8ddf, #cb96db);
+        }
+        #answer{
+            width: 100px;
+        }  
+        #cd{
+            margin-top: 50px;
+            margin-left: 50px;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+        #score{
+            margin-top: 50px;
+            margin-right: 50px;
+            margin-bottom: 30px;
+            float: right;
+        }
+        #subject{
+            margin-left: 50px;
+            margin-bottom: 30px;
+        }
+        #btn3{
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top"></div>
+    <div id="all">
+        <div id="div">
+            <img src="img/0.png" />
+            <img src="img/0.png" />
+            时
+            <img src="img/0.png" />
+            <img src="img/0.png" />
+            分
+            <img src="img/0.png" />
+            <img src="img/0.png" />
+            秒
+        </div>
+        <div id="login">
+            <form>
+                <div id="user">
+                    <label>学生姓名</label><input type="text" name="username" id="input1" autocomplete="off"/>
+                </div>
+                <div id="tip1"></div>
+                <div id="pw">
+                    <label>学生学号</label><input type="password" name="password" id="input2" autocomplete="off"/>
+                </div>
+                <div id="tip2"></div>
+            </form>
+            <div id="button">
+                <button id="sub">登录</button>
+            </div>
+        </div>
+        <div id="initial">
+            <p id="title">二十秒大挑战</p>
+            <div id="introduce">
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点击“我已准备好”后，你可以随意选择加减乘除四个板块的速算训练，每个板块的答题时间都是二十秒。答对加十分，答错或不答不加分。
+                </p>
+            </div>
+            <div id="btn">
+                <button id="ready">我已准备好</button>
+                <p id="into"></p>
+            </div>
+        </div>
+        <div id="choose">
+            <div class="roll">
+                <p id="txt">欢迎进入“二十秒大挑战”</p>
+            </div>
+            <div id="btn1">
+                <button id="pl">加</button>
+                <button id="re">减</button>
+                <button id="mu">乘</button>
+                <button id="di">除</button>
+            </div>
+            <div id="tips">
+                <p>加法：100以内加法</p>
+                <p>减法：100以内减法</p>
+                <p>乘法：20以内乘法</p>
+                <p>除法：100以内除法（只需写出整数部分）</p>
+            </div>
+        </div>
+        <div id="test">
+            <div id="cd"></div>
+            <div id="score"></div>
+            <div id="subject">
+                <span id="formula"></span>
+                <input type="text" id="answer">
+            </div>
+            <button id="btn3">提交答案</button>
+        </div>
+    </div>
+</body>
+<script>
+
+    setInterval(function(){
+		var now = new Date();
+		var h = now.getHours();
+		var m = now.getMinutes();
+		var s = now.getSeconds();
+		
+		var _date = [
+			h<10?0:Math.floor(h/10), h%10,
+			m<10?0:Math.floor(m/10), m%10,
+			s<10?0:Math.floor(s/10), s%10
+			]
+		console.log(_date);
+		
+		var imgs = document.getElementsByTagName("img");
+		for(var i=0; i<imgs.length; i++){
+			imgs[i].src = "img/"+_date[i]+".png";
+		}
+    }, 1000);
+    
+
+
+    var input1 = document.getElementById("input1");
+    var input2 = document.getElementById("input2");
+    var tip1 = document.getElementById("tip1");
+    var tip2 = document.getElementById("tip2");
+    var sub = document.getElementById("sub");
+    var div = document.getElementById("div");
+    var initial = document.getElementById("initial");
+    var ready = document.getElementById("ready");
+    var into = document.getElementById("into");
+    var txt = document.getElementById("txt");
+    var choose = document.getElementById("choose");
+    var pl = document.getElementById("pl");
+    var re = document.getElementById("re");
+    var mu = document.getElementById("mu");
+    var di = document.getElementById("di");
+    var btn2 = document.getElementById("btn2");
+    var test = document.getElementById("test");
+    var cd = document.getElementById("cd");
+    var score = document.getElementById("score");
+    var subject = document.getElementById("subject");
+    var formula = document.getElementById("formula");
+    var answer = document.getElementById("answer");
+    var btn = document.getElementById("btn");
+    var roll = document.getElementsByClassName("roll");
+
+    
+    var txt1 = "用户名不能为空";    
+    var txt2 = "密码不能为空";   
+    input1.onblur = function(){
+        if(this.value == ""){
+            tip1.innerHTML = txt1;
+        }
+        if(this.value != ""){
+            tip1.innerHTML = "";
+        }
+    }
+    
+    input2.onblur = function(){
+        if(this.value == ""){
+            tip2.innerHTML = txt2;
+        }
+        if(this.value != ""){
+            tip2.innerHTML = "";
+        }
+    }
+
+    sub.onclick = function(){
+        if(input1.value == ""){
+            if(input2.value == ""){
+                alert("请输入姓名和学号");
+            }
+            if(input2.value != ""){
+                alert("请输入姓名");
+            }
+        }
+        else if(input1.value != ""){
+            if(input2.value == ""){
+                alert("请输入学号");
+            }
+            if(input2.value != ""){
+                login.style.display = "none";
+                initial.style.display = "block";
+                choose.style.display = "none";
+                test.style.display = "none";
+                div.style.display = "none";
+            }
+        }
+    }
+
+    
+
+    ready.onclick = function(){ 
+        var time = 3;
+        var timer = setInterval(function() {
+            into.innerHTML = time +"秒后进入";
+            time--;
+            if (time == 0) {
+                clearInterval(timer);
+            }
+        }, 1000);
+        var timeId = setTimeout(function(){
+            login.style.display = "none";
+            initial.style.display = "none";
+            choose.style.display = "block";
+            test.style.display = "none";
+        },4000)
+
+
+
+        //滚动效果
+        roll[0].style.marginLeft =  "0";
+        var intervalId = setInterval(function(){
+            var marginLeft = parseInt(roll[0].style.marginLeft);
+            if(marginLeft >= 500){
+                marginLeft = "0"
+            }
+            roll[0].style.marginLeft = (marginLeft + 1) + "px";
+        },50)
+        
+
+        //加法
+        pl.onclick = function(){
+            test.style.display = "block"
+            initial.style.display = "none";
+            choose.style.display = "none";
+
+            //倒计时
+            var time = 20;
+            cd.innerHTML = "倒计时：" + time + "s";
+            var timer = setInterval(function() {
+                time--;
+                cd.innerHTML = "倒计时：" + time + "s";
+                if (time == 0) {
+                    clearInterval(timer);
+                    choose.style.display = "block";
+                    test.style.display = "none";
+                }
+            }, 1000);
+
+            //得分
+            var sc1 = 0;
+            score.innerHTML = "得分：" + sc1;
+
+            //随机数
+            num1 = parseInt(Math.random() * 101);
+            num2 = parseInt(Math.random() * 101);
+            formula.innerHTML = num1 + " + " + num2 + " = ";
+            answer.focus();
+
+            //提交答案
+            btn3.onclick = function(){
+                if(answer.value == num1 + num2){
+                    sc1 += 10;
+                    score.innerHTML = "得分：" + sc1;
+                }
+                answer.value = "";
+                num1 = parseInt(Math.random() * 101);
+                num2 = parseInt(Math.random() * 101);
+                formula.innerHTML = num1 + " + " + num2 + " = ";
+                answer.focus();
+            }
+        } 
+
+
+
+        //减法   
+        re.onclick = function(){
+            test.style.display = "block"
+            initial.style.display = "none";
+            choose.style.display = "none";
+
+            //倒计时
+            var time = 20;
+            cd.innerHTML = "倒计时：" + time + "s";
+            var timer = setInterval(function() {
+                time--;
+                cd.innerHTML = "倒计时：" + time + "s";
+                if (time == 0) {
+                    clearInterval(timer);
+                    choose.style.display = "block";
+                    test.style.display = "none";
+                }
+            }, 1000);
+
+            //得分
+            var sc2 = 0;
+            score.innerHTML = "得分：" + sc2;
+
+            //随机数
+            num1 = parseInt(Math.random() * 101);
+            num2 = parseInt(Math.random() * num1);
+            formula.innerHTML = num1 + " - " + num2 + " = ";
+            answer.focus();
+
+            //提交答案
+            btn3.onclick = function(){
+                if(answer.value == num1 - num2){
+                    sc2 += 10;
+                    score.innerHTML = "得分：" + sc2;
+                }
+                answer.value = "";
+                num1 = parseInt(Math.random() * 101);
+                num2 = parseInt(Math.random() * num1);
+                formula.innerHTML = num1 + " - " + num2 + " = ";
+                answer.focus();
+            }
+        }     
+
+
+
+        //乘法   
+        mu.onclick = function(){
+            test.style.display = "block"
+            initial.style.display = "none";
+            choose.style.display = "none";
+
+            //倒计时
+            var time = 20;
+            cd.innerHTML = "倒计时：" + time + "s";
+            var timer = setInterval(function() {
+                time--;
+                cd.innerHTML = "倒计时：" + time + "s";
+                if (time == 0) {
+                    clearInterval(timer);
+                    choose.style.display = "block";
+                    test.style.display = "none";
+                }
+            }, 1000);
+
+            //得分
+            var sc3 = 0;
+            score.innerHTML = "得分：" + sc3;
+
+            //随机数
+            num1 = parseInt(Math.random() * 20);
+            num2 = parseInt(Math.random() * 20);
+            formula.innerHTML = num1 + " * " + num2 + " = ";
+            answer.focus();
+
+            //提交答案
+            btn3.onclick = function(){
+                if(answer.value == num1 * num2){
+                    sc3 += 10;
+                    score.innerHTML = "得分：" + sc3;
+                }
+                answer.value = "";
+                num1 = parseInt(Math.random() * 20);
+                num2 = parseInt(Math.random() * 20);
+                formula.innerHTML = num1 + " * " + num2 + " = ";
+                answer.focus();
+            }
+        }  
+        
+        
+
+        //除法   
+        di.onclick = function(){
+            test.style.display = "block"
+            initial.style.display = "none";
+            choose.style.display = "none";
+
+            //倒计时
+            var time = 20;
+            cd.innerHTML = "倒计时：" + time + "s";
+            var timer = setInterval(function() {
+                time--;
+                cd.innerHTML = "倒计时：" + time + "s";
+                if (time == 0) {
+                    clearInterval(timer);
+                    choose.style.display = "block";
+                    test.style.display = "none";
+                }
+            }, 1000);
+
+            //得分
+            var sc4 = 0;
+            score.innerHTML = "得分：" + sc4;
+
+            //随机数
+            num1 = parseInt(Math.random() * 101 + 1);
+            num2 = parseInt(Math.random() * num1 + 1);
+            formula.innerHTML = num1 + " / " + num2 + " = ";
+            answer.focus();
+
+            //提交答案
+            btn3.onclick = function(){
+                if(answer.value == parseInt(num1 / num2)){
+                    sc4 += 10;
+                    score.innerHTML = "得分：" + sc4;
+                }
+                answer.value = "";
+                num1 = parseInt(Math.random() * 101 + 1);
+                num2 = parseInt(Math.random() * num1 + 1);
+                formula.innerHTML = num1 + " / " + num2 + " = ";
+                answer.focus();
+            }
+        }     
+    }
+</script>
+</html>
